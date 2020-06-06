@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS Alarm Clock</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <link href="css/alarm-clock-style.css" rel="stylesheet">
+    <script src="./Controller/ButtonsController.js"></script>
+    <script src="./Model/CurrentTime.js"></script>
+    <script src="./View/Timer.js"></script>
+    <script src="./View/AlarmsList.js"></script>
+    <script src="./Controller/AlarmClockController.js"></script>
+</head>
+<body>
+
+<div id="alarm-clock">
+    <div id="current-time">
+        <div>
+            <h2> Current time </h2>
+
+            <div class="square">
+                <div class="digits" id="chr">00</div>
+                <div class="text">HR</div>
+            </div>
+
+            <div class="square">
+                <div class="digits" id="cmin">00</div>
+                <div class="text">MIN</div>
+            </div>
+
+            <div class="square">
+                <div class="digits" id="csec">00</div>
+                <div class="text">SEC</div>
+            </div>
+        </div>
+        <div id="current-date"></div>
+        <script>Timer.startTime();</script>
+    </div>
+
+    <div id="tpick">
+        <h2>SET ALARM FOR</h2>
+        <div class="d-inline p-2">
+            <input id="appt-time" type="time" name="appt-time" value="00:00">
+            <form>
+                <input type="date" id="appt-date">
+                <script>document.getElementById('appt-date').valueAsDate = new Date();</script>
+            </form>
+        </div>
+        <div>
+            <button type="button" class="btn btn-success" id="tset" onclick="new ButtonsController().setAlarmClock()">
+                Set
+            </button>
+            <button type="button" class="btn btn-warning" id="treset" onclick="new ButtonsController().resetSound()">
+                Stop
+            </button>
+        </div>
+    </div>
+</div>
+
+<div id="alarm-list">
+    <h3>Alarms list</h3>
+    <table id="alarms-list-table" class="table">
+        <thead>
+        <tr id="table-header">
+            <th>Hours</th>
+            <th>Minutes</th>
+            <th>Date</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="table-primary"></tr>
+        </tbody>
+    </table>
+</div>
+
+<audio id="alarm-sound">
+    <source src="resources/alarm-sound.mp3" type="audio/mp3">
+</audio>
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+#current-time, #tpick {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body{
+  background: #A1DDA1;
+  color: rgb(221, 221, 221);
+}
+
+#alarm-clock {
+  margin: 0 auto;
+  max-width: 500px;
+  padding: 10px;
+  text-align: center;
+}
+
+#alarm-list {
+  color: rgba(0, 0, 0, 0.82);
+  margin: 0 auto;
+  max-width: 500px;
+  padding: 10px;
+  text-align: center;
+}
+
+#current-time {
+  max-width: 100%;
+  padding: 5%;
+  text-align: center;
+  border-radius: 5%;
+  margin-bottom: 5%;
+  background: #008080;
+}
+
+@font-face{
+  font-family:'digital-clock-font';
+  src: url('./fonts/digital-7.ttf');
+}
+
+#current-time .square {
+  display: inline-block;
+  margin: 10px;
+  padding: 5px;
+}
+
+#current-time .digits {
+  font-size: 30px;
+  background: #fff;
+  color: #000;
+  padding: 20px 10px;
+  border-radius: 5px;
+  width: 50px;
+  height: 80px;
+  font-family: 'digital-clock-font', serif;
+}
+
+#curent-time .text {
+  margin-top: 10px;
+  color: #dddddd;
+}
+
+#current-date{
+  font-size: 150%;
+}
+
+#tpick {
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 5%;
+  text-align: center;
+  border-radius: 5%;
+  background: #008080;
+}
+
+#tpick-h, #tpick-m, #tpick-s {
+  display: inline-block;
+  width: 20%;
+}
+
+#tpick select {
+  width: 100%;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+#appt-time {
+  margin-bottom: 3%;
+  font: 20px Arial, Helvetica, sans-serif;
+  width: 30%;
+  border:none;
+  border-radius: 5px;
+  text-align: center;
+}
+
+#appt-date{
+  font: 20px Arial, Helvetica, sans-serif;
+  border:none;
+  border-radius: 5px;
+  text-align: center;
+  width: 40%;
+}
+
+#table-header{
+  background: #A1DDA1;
+}
+
+#tset, #treset {
+  width: 30%;
+  color: black;
+  font-size: 20px;
+  padding: 10px;
+  cursor: pointer;
+  border-width: 3px;
+}
